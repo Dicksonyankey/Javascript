@@ -4,7 +4,7 @@
 
 **Author:** Dickson Kwasi Yankey
 
-![100 Days Javascript Learning Banner](https://treehouse-marketing.s3.amazonaws.com/open-graph-social/100daysofcode_OG_banner-06-06.png)
+![100 Days Javascript Learning Banner](https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.teamtreehouse.com%2Ftry-100daysofcode-with-treehouse&psig=AOvVaw1xKJo0aTGeTy1T9mE98MjW&ust=1696343330201000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCti7_J14EDFQAAAAAdAAAAABAJ)
 
 
 
