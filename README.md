@@ -1,12 +1,6 @@
 # 100 Days Javascript Learning
 <img src="https://treehouse-marketing.s3.amazonaws.com/open-graph-social/100daysofcode_OG_banner-06-06.png"/>
 
-**<u>Find Me On</u>**
-<br>
-- [Youtube](https://www.youtube.com/@dky_code)<br>
-- [Instagram]( https://www.instagram.com/dky_code/)<br>
-- [LinkedIn](https://www.linkedin.com/in/dickson-kwasi-yankey-29433217b/)
-
 ## Introduction to JavaScript
 JavaScript is a versatile and widely used programming language primarily known for adding interactivity and dynamic content to websites. It is a part of the core technologies of the World Wide Web, alongside HTML and CSS. JavaScript enables developers to create responsive web applications that enhance user experience, making the web more engaging and user-friendly.
 
