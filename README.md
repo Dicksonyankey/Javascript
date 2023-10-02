@@ -4,7 +4,7 @@
 
 **Author:** Dickson Kwasi Yankey
 
-![100 Days Javascript Learning Banner](https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.teamtreehouse.com%2Ftry-100daysofcode-with-treehouse&psig=AOvVaw1xKJo0aTGeTy1T9mE98MjW&ust=1696343330201000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCti7_J14EDFQAAAAAdAAAAABAJ)
+![100 Days Javascript Learning](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fprogramming-code&psig=AOvVaw1xKJo0aTGeTy1T9mE98MjW&ust=1696343330201000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCti7_J14EDFQAAAAAdAAAAABAs)
 
 
 
