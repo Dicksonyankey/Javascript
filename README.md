@@ -1,4 +1,11 @@
 # 100 Days Javascript Learning
+<img src="https://treehouse-marketing.s3.amazonaws.com/open-graph-social/100daysofcode_OG_banner-06-06.png"/>
+
+**<u>Find Me On</u>**
+<br>
+- [Youtube](https://www.youtube.com/@dky_code)<br>
+- [Instagram]( https://www.instagram.com/dky_code/)<br>
+- [LinkedIn](https://www.linkedin.com/in/dickson-kwasi-yankey-29433217b/)
 
 ## Introduction to JavaScript
 JavaScript is a versatile and widely used programming language primarily known for adding interactivity and dynamic content to websites. It is a part of the core technologies of the World Wide Web, alongside HTML and CSS. JavaScript enables developers to create responsive web applications that enhance user experience, making the web more engaging and user-friendly.
@@ -20,6 +27,13 @@ JavaScript is a versatile and widely used programming language primarily known f
 Join me, Dickson Kwasi Yankey, on this exciting journey as I delve deep into the world of JavaScript for 100 days. Each day, I will explore different aspects of the language, from the basics to advanced topics, and share my learning experiences, challenges, and achievements. Stay tuned for daily updates, code snippets, and demos!
 
 **Author:** Dickson Kwasi Yankey
+
+**<u>Find Me On</u>**
+<br>
+- [Youtube](https://www.youtube.com/@dky_code)<br>
+- [Instagram]( https://www.instagram.com/dky_code/)<br>
+- [LinkedIn](https://www.linkedin.com/in/dickson-kwasi-yankey-29433217b/)
+
 
 ## Hashtags
 - #100DaysOfCode
