@@ -6,6 +6,7 @@
 
 ![100 Days Javascript Learning Banner](https://www.google.com/url?sa=i&url=https%3A%2F%2Fjoin.teamtreehouse.com%2F100-days-of-code%2F&psig=AOvVaw1xKJo0aTGeTy1T9mE98MjW&ust=1696343330201000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCOCti7_J14EDFQAAAAAdAAAAABAE)
 
+
 ## Introduction to JavaScript
 JavaScript is a versatile and widely used programming language primarily known for adding interactivity and dynamic content to websites. It is a part of the core technologies of the World Wide Web, alongside HTML and CSS. JavaScript enables developers to create responsive web applications that enhance user experience, making the web more engaging and user-friendly.
 
