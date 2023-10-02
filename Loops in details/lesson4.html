@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="lesson4.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h3>Student Grade</h3>
+		<select id="grade" onchange="compareSelectedValue()"></select>
+
+		<h2 id="message"></h2>
+
+		<div class="main">
+			<div>
+				<ul id="source">
+					<li>John Doe</li>
+					<li>James Doe</li>
+					<li>Peter Doe</li>
+					<li>Jane Doe</li>
+				</ul>
+			</div>
+			<div class="button">
+				<button id="move">&gt;&gt;</button>
+				<button id="move-back">&lt;&lt;</button>
+			</div>
+			<div>
+				<ul id="target"></ul>
+			</div>
+		</div>
+
+		<script src="lesson4.js"></script>
+	</body>
+</html>

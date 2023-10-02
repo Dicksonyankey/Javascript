@@ -1,0 +1,32 @@
+#grade {
+	width: 50%;
+	height: inherit;
+	border-radius: 2px;
+	border: 1px solid green;
+}
+
+.main {
+	width: 50%;
+	height: inherit;
+	border: 1px solid rgb(107, 106, 106);
+	display: flex;
+}
+
+div {
+	width: 50%;
+	height: inherit;
+	border: 1px solid rgb(92, 91, 91);
+   
+}
+
+ul{
+    list-style: none;
+    padding: inherit;
+}
+
+.button {
+	display: flex;
+    flex-direction: column;
+	justify-content: space-evenly;
+    align-items: center;
+}
