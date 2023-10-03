@@ -212,7 +212,91 @@ console.log(john2);
 const james2 = createNewUser(...userData2);
 console.log(james2);
 
-
 // ============================================================================
 //  Defining Functions Using Short Notation
 // ============================================================================
+
+// (parameters) => {function body} // Basic Structure of an Arrow Function
+
+// An Arrow Function with One Parameter
+const showMessage4 = (message) => console.log(message);
+
+// An Arrow Function without Parameters
+const printHelloWorld = () => console.log("Hello world");
+
+// ============= An Arrow Function That Returns an Object =================
+const createUser3 = (username, email, password) => ({
+	username: username,
+	email: email,
+	password: password,
+});
+
+// ============== same as this =============
+
+function createUser4(username, email, password) {
+	const user = {
+		username: username,
+		email: email,
+		password: password,
+	};
+	return user;
+}
+
+// =========================================================
+// Modifying Strings via Functions
+// =========================================================
+
+// const fullname = 'John Doe';
+// const age = 44;
+// function tagFunction(strings, ...replacements) { }
+// const message = tagFunction`My name is ${fullname}, I am ${age} years old.`;
+// console.log(message);
+
+// Implementation and Usage of a Tag Function
+
+function tagFunction(strings, ...replacements) {
+	const name = replacements[0];
+	const age = replacements[1];
+
+	if (age > 80) {
+		return `${strings[0]}${replacements[0]}`;
+	}
+
+	return `${strings[0]}${replacements[0]}${strings[1]}${replacements[1]}${strings[2]}`;
+}
+
+const name = "John Doe";
+let age = 100;
+
+const showResult = tagFunction`My name is ${name}, I am ${age} years old`;
+console.log(showResult);
+
+// ==========================================
+// Context Object
+// ===============
+
+const data = {
+	name: "John",
+	getName: function () {
+		return this.name;
+	},
+};
+console.log(data.getName());
+// The output of the program is John, as expected, because (this) refers to the person object here.
+
+var value = "global name";
+function getNameGlobal() {
+	return this.value;
+}
+console.log(getNameGlobal()); // Output : global name
+
+const person4 = {
+	value: "James",
+	getName: getNameGlobal,
+};
+const artist = {
+	value: "Kyuss",
+	getName: getNameGlobal,
+};
+console.log(person4.getName()); // Output: James
+console.log(artist.getName()); // Output: Kyuss
