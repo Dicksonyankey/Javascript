@@ -300,3 +300,32 @@ const artist = {
 };
 console.log(person4.getName()); // Output: James
 console.log(artist.getName()); // Output: Kyuss
+
+
+// =============================================
+// Catching and Handling Errors
+// =============================================
+
+// The Basic Structure of a try-catch Block
+
+// try {
+//   // Execute code that potentially produces errors
+// } catch (error) {
+//   // Handle the error
+// }
+
+const userInput = -1;
+const length = parseInt(userInput);
+
+let array;
+try {
+	createArray(length);
+} catch (error) {
+	console.log(error.name);
+	console.log(error.message);
+}
+
+function createArray(length) {
+	return new Array(length);
+}
+
