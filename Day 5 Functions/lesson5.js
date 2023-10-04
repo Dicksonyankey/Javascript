@@ -301,7 +301,6 @@ const artist = {
 console.log(person4.getName()); // Output: James
 console.log(artist.getName()); // Output: Kyuss
 
-
 // =============================================
 // Catching and Handling Errors
 // =============================================
@@ -314,10 +313,11 @@ console.log(artist.getName()); // Output: Kyuss
 //   // Handle the error
 // }
 
+// Example of the Use of a try-catch Block
+
 const userInput = -1;
 const length = parseInt(userInput);
 
-let array;
 try {
 	createArray(length);
 } catch (error) {
@@ -327,5 +327,68 @@ try {
 
 function createArray(length) {
 	return new Array(length);
+}
+
+// ==============================
+// Triggering Errors
+// =============================
+
+// Triggered an intention error and handled it.
+try {
+	console.log(checkAge(22));
+	console.log(checkAge(50));
+	console.log(checkAge("Age"));
+	console.log(checkAge1(22)); // true
+	console.log(checkAge1("John Doe")); // TypeError: Age must be a number
+} catch (error) {
+	console.log(error.name);
+	console.log(error.message);
+}
+
+// You can apply your custom tagFuntion the modify your out depending on your age.
+
+// A Function That Throws an Error.
+function checkAge(age) {
+	if (!isNaN(parseFloat(age))) {
+		throw new Error("Age must  be a number");
+	} else if (age < 0) {
+		throw new Error("Age must not be a negative number");
+	} else {
+		return `You are ${age} years old`;
+	}
+}
+
+// Use Different Error Objects Depending on the Type of Error
+
+function checkAge1(age) {
+	if (isNaN(parseFloat(age))) {
+		throw new TypeError("Age must be a number.");
+	} else if (age < 0) {
+		throw new RangeError("Age must not be negative.");
+	}
+	return true; // In case of error, this statement will no longer be executed.
+}
+
+function openDatabaseConnection() {
+	console.log("Database connection open");
+}
+function closeDatabaseConnection() {
+	console.log("Database connection closed");
+}
+
+function getUsersByName(name) {
+	if (typeof name !== "string") {
+		throw new TypeError("String expected");
+	}
+}
+
+openDatabaseConnection();
+try {
+	getUsersByName(22);
+} catch (error) {
+	console.log(error.message);
+	throw new Error("Error communicating with the database");
+} finally {
+	closeDatabaseConnection(); // 'Database connection closed'
 }
 

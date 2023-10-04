@@ -20,4 +20,3 @@ function showResult(result) {
 	const resultField = document.getElementById("result");
 	resultField.value = result;
 }
-
