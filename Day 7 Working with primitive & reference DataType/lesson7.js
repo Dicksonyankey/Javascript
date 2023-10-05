@@ -107,11 +107,11 @@ const array = [
 
 const itemInformation = Object.fromEntries(array);
 console.log(itemInformation);
-console.log(itemInformation.name); 
-console.log(itemInformation.price); 
-console.log(itemInformation.author); 
+console.log(itemInformation.name);
+console.log(itemInformation.price);
+console.log(itemInformation.author);
 console.log(itemInformation.isbn);
-itemInformation.printDescription()
+itemInformation.printDescription();
 
 // ===========================================
 // Creating Objects via Constructor Functions
@@ -141,3 +141,243 @@ const item2 = new Item(
 	"978-1-4932-2292-6"
 );
 
+console.log(item2);
+
+// ===========================================
+// Creating Objects Using Classes
+// ===========================================
+
+class ItemClass {
+	constructor(name, price, author, isbn) {
+		this.name = name;
+		this.price = price;
+		this.author = author;
+		this.isbn = isbn;
+	}
+	printDescription() {
+		console.log(`${this.author}: ${this.name}`);
+	}
+}
+
+const item4 = new ItemClass(
+	"JavaScript: The Comprehensive Guide",
+	59.95,
+	"Philip Ackermann",
+	"978-1-4932-2286-5"
+);
+console.log(item4.name);
+console.log(item4.price);
+console.log(item4.author); // "Philip Ackermann"
+console.log(item4.isbn); // "978-1-4932-2286-5"
+item.printDescription(); // "Philip Ackermann:
+
+const item3 = new ItemClass(
+	"Node.js: The Comprehensive Guide",
+	49.94,
+	"Sebastian Springer",
+	"978-1-4932-2292-6"
+);
+console.log(item3.name);
+console.log(item3.price);
+console.log(item3.author); // "Sebastian Springer"
+console.log(item3.isbn); // "978-1-4932-2292-6"
+item2.printDescription(); // "Sebastian Springer:
+
+// =================================================
+// Creating Objects via the Object.create() Function
+// =================================================
+
+const itemObject = Object.create(Object.prototype, {
+	name: {
+		value: "JavaScript: The Comprehensive Guide",
+	},
+	price: {
+		value: 59.95,
+	},
+	author: {
+		value: "Philip Ackermann",
+	},
+	isbn: {
+		value: "978-1-4932-2286-5",
+	},
+	printDescription: {
+		value: function () {
+			console.log(`${this.author}: ${this.name}`);
+		},
+	},
+});
+
+// ============================================
+// Property Attributes on the Object.create()
+// ===========================================
+
+const itemObject1 = Object.create(Object.prototype, {
+	name: {
+		Value: "Node Js: The beginners Guide",
+		writable: true,
+		configurable: true,
+		enumerable: true,
+	},
+	price: {
+		value: 49.99,
+		writable: true,
+		configurable: true,
+		enumerable: true,
+	},
+	author: {
+		value: "Philip Ackermann",
+		writable: false,
+		configurable: true,
+		enumerable: true,
+	},
+	isbn: {
+		value: "978-1-4932-2286-5",
+		writable: false,
+		configurable: true,
+		enumerable: true,
+	},
+	printDescription: {
+		value: function () {
+			console.log(`${this.author}: ${this.name}`);
+		},
+	},
+});
+
+for (let property in itemObject1) {
+	console.log(property);
+}
+
+itemObject1.name = "The Ultimate Guide";
+console.log(itemObject1.name);
+
+itemObject1.author = "Dr. Felix Effah";
+console.log(itemObject1.author); // This is not cause any change.
+
+// Access to the Property Attributes
+const itemOne = {
+	name: "JavaScript: The Comprehensive Guide",
+	price: 59.95,
+	author: "Philip Ackermann",
+	isbn: "978-1-4932-2286-5",
+	printDescription: function () {
+		console.log(`${this.author}: ${this.name}`);
+	},
+};
+const propertyDescriptor = Object.getOwnPropertyDescriptor(itemOne, "name");
+console.log(propertyDescriptor.enumerable); // true
+console.log(propertyDescriptor.configurable); // true
+console.log(propertyDescriptor.writable); // true
+console.log(propertyDescriptor.value); // JavaScript: The Comprehensive Guide
+
+// ===========================================================
+// Accessing Properties and Calling Methods
+// ===========================================================
+
+// Getters and Setters when Using Object Literal Notation
+const itemTwo = {
+	_name: "JavaScript: The Comprehensive Guide",
+	_price: 59.95,
+	_author: "Philip Ackermann",
+	_isbn: "978-1-4932-2286-5",
+	set name(newName) {
+		if (typeof newName === "string") {
+			console.log("Set new name");
+			this._name = newName;
+		} else {
+			throw new TypeError("Name must be a string.");
+		}
+	},
+	get name() {
+		console.log("Return name");
+		return this._name;
+	},
+};
+
+console.log(itemTwo.name);
+itemTwo.name = "JavaScript: The Comprehensive Guide by Philip Ackermann";
+console.log(itemTwo.name);
+
+// Creating Object Properties and Object Methods via Helper Methods: (Object.defineProperty)
+const itemThree = {};
+Object.defineProperty(itemThree, "name", {
+	value: "JavaScript: The Comprehensive Guide",
+});
+Object.defineProperty(itemThree, "price", {
+	value: 59.95,
+});
+Object.defineProperty(itemThree, "author", {
+	value: "Philip Ackermann",
+});
+Object.defineProperty(itemThree, "isbn", {
+	value: "978-1-4932-2286-5",
+});
+Object.defineProperty(itemThree, "printDescription", {
+	value: function () {
+		console.log(`${this.author}: ${this.name}`);
+	},
+});
+
+// Adding New Properties and Methods via the Object.defineProperties() Method
+const itemFour = {};
+Object.defineProperties(item, {
+	name: {
+		value: "JavaScript: The Comprehensive Guide",
+	},
+	price: {
+		value: 59.95,
+	},
+	author: {
+		value: "Philip Ackermann",
+	},
+	isbn: {
+		value: "978-1-4932-2286-5",
+	},
+	printDescription: {
+		value: function () {
+			console.log(`${this.author}: ${this.name}`);
+		},
+	},
+});
+
+
+// Outputting Object Properties and Object Methods via the for-in Loop
+
+const item5 = {
+	name: "JavaScript: The Comprehensive Guide",
+	price: 59.95,
+	author: "Philip Ackermann",
+	isbn: "978-1-4932-2286-5",
+	printDescription: function () {
+		console.log(`${this.author}: ${this.name}`);
+	},
+};
+for (let property in item5) {
+	console.log(`Name: ${property}`);
+	console.log(`Value: ${item5[property]}`);
+}
+
+// Listing All Object Properties and Object Methods via the Object.keys() Method
+
+const properties = Object.keys(item);
+for (let i = 0; i < properties.length; i++) {
+	const property = properties[i];
+	console.log(`Name: ${property}`);
+	console.log(`Value: ${item[property]}`);
+}
+printArray(properties);
+function printArray(array) {
+	for (let i = 0; i < array.length; i++) {
+		console.log(array[i]);
+	}
+}
+
+// Listing All Object Properties and Object Methods via the Object.values() Method
+
+const values = Object.values(item);
+console.log(values);
+
+
+// Listing All Object Properties and Object Methods via the Object.entries() Method
+
+const entries = Object.entries(item);
+console.log(entries);
