@@ -400,3 +400,6 @@ console.log(Object.isExtensible(john1));
 john1.firstName = "James";
 console.log(john.firstName);
 
+console.log(entries);
+
+
